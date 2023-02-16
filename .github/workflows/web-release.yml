@@ -29,11 +29,8 @@ jobs:
       - name: Get dependencies
         run: flutter pub get example
 
-      - name: Go to example
-        run: cd example
-
       - name: Start Web Release Build
-        run: flutter build web --release
+        run: cd example && flutter build web --release
 
       - name: Upload Web Build Files
         uses: actions/upload-artifact@v2
