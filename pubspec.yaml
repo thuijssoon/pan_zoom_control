@@ -1,6 +1,6 @@
 name: pan_zoom_control
 description: A pan and zoom control for InteractiveViewer.
-version: 0.0.1
+version: 0.1.0
 author: Thijs Huijssoon
 homepage: https://github.com/thuijssoon/pan_zoom_control
 
