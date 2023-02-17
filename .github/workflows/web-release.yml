@@ -1,8 +1,8 @@
-name: Gh-Pages
+name: Example Github-Pages
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
 
 jobs:
   build:
@@ -14,4 +14,6 @@ jobs:
       - uses: bluefireteam/flutter-gh-pages@v7
         with:
           workingDir: example
+          # set the corresponding github page base url
+          # this is required so the index.html finds the necessary resources
           baseHref: /pan_zoom_control/
