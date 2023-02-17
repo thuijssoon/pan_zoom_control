@@ -13,13 +13,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final image = Image.asset('assets/landscape.jpeg');
     return MaterialApp(
       home: Scaffold(
         body: LayoutBuilder(
           builder: (context, constraints) {
             final Size viewportSize =
-            Size(constraints.maxWidth, constraints.maxHeight);
+                Size(constraints.maxWidth, constraints.maxHeight);
             const Size contentSize = Size(1500, 1000);
             const double minScale = 0.1;
             const double maxScale = 2.0;
@@ -27,14 +26,14 @@ class MyApp extends StatelessWidget {
               children: <Widget>[
                 InteractiveViewer(
                   boundaryMargin: EdgeInsets.all(min(
-                      viewportSize.width.toDouble(),
-                      viewportSize.height.toDouble()) /
+                          viewportSize.width.toDouble(),
+                          viewportSize.height.toDouble()) /
                       2),
                   constrained: false,
                   minScale: minScale,
                   maxScale: maxScale,
                   transformationController: controller,
-                  child: Image.asset('assets/landscape.jpeg'),
+                  child: Image.asset('assets/images/landscape.jpeg'),
                 ),
                 Positioned(
                   left: 10,
@@ -59,6 +58,14 @@ class MyApp extends StatelessWidget {
                       controller: controller,
                       minScale: minScale,
                       maxScale: maxScale,
+                      textStyle: const TextStyle(
+                        color: Color(0xFF727897),
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: 1.02,
+                        fontFamily: 'Inter',
+                        height: 20/14,
+                      ),
                       sliderThemeData: SliderThemeData(
                         trackHeight: 3.0,
                         // trackShape: const RoundedRectSliderTrackShape(),
@@ -101,7 +108,7 @@ class MyApp extends StatelessWidget {
                         width: contentSize.width,
                         height: contentSize.height,
                         color: Colors.black12,
-                        child: Image.asset('assets/landscape.jpeg'),
+                        child: Image.asset('assets/images/landscape.jpeg'),
                       ),
                     ),
                   ),
