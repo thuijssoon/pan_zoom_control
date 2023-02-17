@@ -2,10 +2,14 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:pan_zoom_control/pan_zoom_control.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 import 'custom_slider_theme.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  setPathUrlStrategy();
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   MyApp({super.key});
@@ -64,7 +68,7 @@ class MyApp extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                         letterSpacing: 1.02,
                         fontFamily: 'Inter',
-                        height: 20/14,
+                        height: 20 / 14,
                       ),
                       sliderThemeData: SliderThemeData(
                         trackHeight: 3.0,

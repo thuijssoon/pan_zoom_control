@@ -11,6 +11,7 @@ dependencies:
     sdk: flutter
   pan_zoom_control:
     path: ../
+  url_strategy: ^0.2.0
 
 dev_dependencies:
   flutter_test:
