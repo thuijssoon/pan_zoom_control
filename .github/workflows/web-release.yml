@@ -17,3 +17,4 @@ jobs:
           # set the corresponding github page base url
           # this is required so the index.html finds the necessary resources
           baseHref: /pan_zoom_control/
+          webRenderer: canvaskit
